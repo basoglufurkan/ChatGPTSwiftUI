@@ -7,9 +7,11 @@
 
 import SwiftUI
 import AVKit
+import StoreKit
 
 struct ContentView: View {
-        
+    
+//    @Environment(\.requestReview) var requestReview
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var vm: ViewModel
     @FocusState var isTextFieldFocused: Bool
@@ -146,6 +148,29 @@ struct ContentView: View {
                         }else {
                             isPaywallPresented = true
                         }
+                    }
+                    
+                    switch vm.messageCounter {
+                    case 20:
+//                        requestReview()
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                    case 50:
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                    case 100:
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                    case 200:
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+
+                    default:
+                        break
                     }
                             
                     
