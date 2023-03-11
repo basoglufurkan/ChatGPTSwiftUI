@@ -7,9 +7,11 @@
 
 import SwiftUI
 import AVKit
+import StoreKit
 
 struct ContentView: View {
-        
+    
+    //    @Environment(\.requestReview) var requestReview
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var vm: ViewModel
     @FocusState var isTextFieldFocused: Bool
@@ -19,10 +21,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-                chatListView
-                    .navigationTitle("ChattyGPT")
-                    
-            }
+            chatListView
+                .navigationTitle("ChattyGPT")
+            
+        }
         .navigationViewStyle(.stack)
     }
     
@@ -35,29 +37,29 @@ struct ContentView: View {
                         /*
                          if !userViewModel.isSubscriptionActive {
                          
-                             // CTA to sign up
+                         // CTA to sign up
                          ZStack {
-                             
-                             RoundedRectangle(cornerRadius: 10)
-                                 .stroke(.white, lineWidth: 3)
-                                 
-                             
-                             VStack (alignment: .leading){
-                                 Text("Sign up for our monthly plan to access all the meditations!")
-                                 
-                                 Button {
-                                     // TODO
-                                     isPaywallPresented = true
-                                     
-                                 } label: {
-                                     Text("Let's do it")
-                                 }
-                                 .padding(10)
-                                 .background(Color.blue)
-                                 .cornerRadius(10)
-                                 .foregroundColor(Color.white)
-                             }
-                             .padding(20)
+                         
+                         RoundedRectangle(cornerRadius: 10)
+                         .stroke(.white, lineWidth: 3)
+                         
+                         
+                         VStack (alignment: .leading){
+                         Text("Sign up for our monthly plan to access all the meditations!")
+                         
+                         Button {
+                         // TODO
+                         isPaywallPresented = true
+                         
+                         } label: {
+                         Text("Let's do it")
+                         }
+                         .padding(10)
+                         .background(Color.blue)
+                         .cornerRadius(10)
+                         .foregroundColor(Color.white)
+                         }
+                         .padding(20)
                          }
                          .padding([.top, .bottom], 20)
                          
@@ -75,11 +77,11 @@ struct ContentView: View {
                         isTextFieldFocused = false
                     }
                 }
-                #if os(iOS) || os(macOS)
+#if os(iOS) || os(macOS)
                 Divider()
                 bottomView(image: "profile", proxy: proxy)
                 Spacer()
-                #endif
+#endif
             }
             .onChange(of: vm.messages.last?.responseText) { _ in  scrollToBottom(proxy: proxy)
             }
@@ -89,7 +91,7 @@ struct ContentView: View {
             
             Paywall(isPaywallPresented: $isPaywallPresented)
         }
-
+        
     }
     
     func bottomView(image: String, proxy: ScrollViewProxy) -> some View {
@@ -102,7 +104,7 @@ struct ContentView: View {
                 } placeholder: {
                     ProgressView()
                 }
-
+                
             } else {
                 Image(image)
                     .resizable()
@@ -131,11 +133,11 @@ struct ContentView: View {
                 Button {
                     
                     if vm.messageCounter < 2 {
-                            Task {
-                                isTextFieldFocused = false
-                                scrollToBottom(proxy: proxy)
-                                await vm.sendTapped()
-                            }
+                        Task {
+                            isTextFieldFocused = false
+                            scrollToBottom(proxy: proxy)
+                            await vm.sendTapped()
+                        }
                     } else {
                         if userViewModel.isSubscriptionActive {
                             Task { @MainActor in
@@ -147,7 +149,30 @@ struct ContentView: View {
                             isPaywallPresented = true
                         }
                     }
-                            
+                    
+                    switch vm.messageCounter {
+                    case 20:
+                        //                        requestReview()
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                    case 50:
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                    case 100:
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                    case 200:
+                        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                            SKStoreReviewController.requestReview(in: scene)
+                        }
+                        
+                    default:
+                        break
+                    }
+                    
                     
                 } label: {
                     Image(systemName: "paperplane.circle.fill")
@@ -155,11 +180,11 @@ struct ContentView: View {
                         .font(.system(size: 30))
                     
                 }
-                #if os(macOS)
+#if os(macOS)
                 .buttonStyle(.borderless)
                 .keyboardShortcut(.defaultAction)
                 .foregroundColor(.accentColor)
-                #endif
+#endif
                 .disabled(vm.inputMessage.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             }
         }
