@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  XCAChatGPT
+
+  Created by Furkan BAŞOĞLU on 4.03.2023.
+  
+*/
+
+"localizedText" = "發送訊息";
+"trial" = "免费试用3天";
+"text1" = "无限使用/问题和答案";
+"text2" = "由GPT支持";
+"text3" = "更高的单词限制";
+"premium" = "解鎖高級版";
+"unlock" = "解鎖所有功能";
+"week" = "星期";
+"month" = "月份";
+"year" = "年份";

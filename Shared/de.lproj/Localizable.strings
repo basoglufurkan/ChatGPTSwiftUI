@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  XCAChatGPT
+
+  Created by Furkan BAŞOĞLU on 4.03.2023.
+  
+*/
+
+"localizedText" = " Nachricht senden";
+"trial" = "3 Tage lang kostenlos testen";
+"text1" = "Unbegrenzte Nutzung / Fragen und Antworten";
+"text2" = "Angetrieben von GPT";
+"text3" = "Höhere Wortgrenze";
+"premium" = "Premium freischalten";
+"unlock" = "Alle Funktionen freischalten";
+"week" = "woche";
+"month" = "monat";
+"year" = "jahr";
