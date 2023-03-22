@@ -22,7 +22,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             chatListView
-                .navigationTitle("ChattyGPT")
+                .navigationTitle("Synthia AI")
             
         }
         .navigationViewStyle(.stack)
