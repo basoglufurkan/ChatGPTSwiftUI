@@ -65,8 +65,8 @@
 		931F54EC29B7010900DE1FAB /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F54EB29B7010900DE1FAB /* Paywall.swift */; };
 		931F54EF29B7039B00DE1FAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F54EE29B7039B00DE1FAB /* Extensions.swift */; };
 		931F54F229B705A000DE1FAB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F54F129B705A000DE1FAB /* UserViewModel.swift */; };
-		93A7927F29BBD76E003F60B1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A7927D29BBD76E003F60B1 /* Launch Screen.storyboard */; };
 		93A7928029BBD76E003F60B1 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A7927E29BBD76E003F60B1 /* LaunchView.swift */; };
+		93CFED7729C674D80096041A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CFED7629C674D80096041A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,8 +140,8 @@
 		931F54EB29B7010900DE1FAB /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
 		931F54EE29B7039B00DE1FAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		931F54F129B705A000DE1FAB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		93A7927D29BBD76E003F60B1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		93A7927E29BBD76E003F60B1 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		93CFED7629C674D80096041A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,7 +303,7 @@
 		930E67F229BA941C008FD343 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				93A7927D29BBD76E003F60B1 /* Launch Screen.storyboard */,
+				93CFED7629C674D80096041A /* Launch Screen.storyboard */,
 				93A7927E29BBD76E003F60B1 /* LaunchView.swift */,
 			);
 			path = Launch;
@@ -548,7 +548,7 @@
 				8B91C00B298AD09F0079AF26 /* Preview Assets.xcassets in Resources */,
 				930E67EB29BA922E008FD343 /* GoogleService-Info.plist in Resources */,
 				931682EA29B3D7CD0062EFE9 /* Localizable.strings in Resources */,
-				93A7927F29BBD76E003F60B1 /* Launch Screen.storyboard in Resources */,
+				93CFED7729C674D80096041A /* Launch Screen.storyboard in Resources */,
 				8B91C008298AD09F0079AF26 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -816,7 +816,6 @@
 				DEVELOPMENT_TEAM = HG9R6PZ3X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -844,7 +843,6 @@
 				DEVELOPMENT_TEAM = HG9R6PZ3X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -986,10 +984,11 @@
 				DEVELOPMENT_TEAM = HG9R6PZ3X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ChattyGPT;
+				INFOPLIST_KEY_CFBundleDisplayName = Synthia;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1017,10 +1016,11 @@
 				DEVELOPMENT_TEAM = HG9R6PZ3X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = ChattyGPT;
+				INFOPLIST_KEY_CFBundleDisplayName = Synthia;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
