@@ -11,11 +11,7 @@ import StoreKit
 
 struct ContentView: View {
     
-<<<<<<< HEAD
-//    @Environment(\.requestReview) var requestReview
-=======
     //    @Environment(\.requestReview) var requestReview
->>>>>>> feature/1-Request-Review
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var vm: ViewModel
     @FocusState var isTextFieldFocused: Bool
@@ -156,11 +152,7 @@ struct ContentView: View {
                     
                     switch vm.messageCounter {
                     case 20:
-<<<<<<< HEAD
-//                        requestReview()
-=======
                         //                        requestReview()
->>>>>>> feature/1-Request-Review
                         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                             SKStoreReviewController.requestReview(in: scene)
                         }
@@ -176,19 +168,11 @@ struct ContentView: View {
                         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                             SKStoreReviewController.requestReview(in: scene)
                         }
-<<<<<<< HEAD
-
-                    default:
-                        break
-                    }
-                            
-=======
                         
                     default:
                         break
                     }
                     
->>>>>>> feature/1-Request-Review
                     
                 } label: {
                     Image(systemName: "paperplane.circle.fill")
