@@ -65,6 +65,7 @@
 		931F54EC29B7010900DE1FAB /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F54EB29B7010900DE1FAB /* Paywall.swift */; };
 		931F54EF29B7039B00DE1FAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F54EE29B7039B00DE1FAB /* Extensions.swift */; };
 		931F54F229B705A000DE1FAB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F54F129B705A000DE1FAB /* UserViewModel.swift */; };
+		938D1D0A29D5379B00A1CBE9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D1D0929D5379B00A1CBE9 /* StoreKit.framework */; };
 		93A7928029BBD76E003F60B1 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A7927E29BBD76E003F60B1 /* LaunchView.swift */; };
 		93CFED7729C674D80096041A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93CFED7629C674D80096041A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		931F54EB29B7010900DE1FAB /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
 		931F54EE29B7039B00DE1FAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		931F54F129B705A000DE1FAB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		938D1D0929D5379B00A1CBE9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		93A7927E29BBD76E003F60B1 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		93CFED7629C674D80096041A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938D1D0A29D5379B00A1CBE9 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +315,7 @@
 		931F54E629B5CDB100DE1FAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				938D1D0929D5379B00A1CBE9 /* StoreKit.framework */,
 				931F54E729B5CDB100DE1FAB /* StoreKit.framework */,
 			);
 			name = Frameworks;
