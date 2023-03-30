@@ -27,7 +27,7 @@ struct LaunchView: View {
             Image("back")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            Image("profile")
+            Image("openai")
                 .resizable()
                 .frame(width: 350, height: 350)
             

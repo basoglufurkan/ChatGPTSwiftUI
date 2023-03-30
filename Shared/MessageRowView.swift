@@ -8,108 +8,157 @@
 import SwiftUI
 
 struct MessageRowView: View {
+    
     @Environment(\.colorScheme) private var colorScheme
     let message: MessageRow
     let retryCallback: (MessageRow) -> Void
-
+    
+    var imageSize: CGSize {
+        #if os(iOS) || os(macOS)
+        CGSize(width: 25, height: 25)
+        #elseif os(watchOS)
+        CGSize(width: 20, height: 20)
+        #else
+        CGSize(width: 80, height: 80)
+        #endif
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
-            HStack(spacing: 16) {
-               
-                    Image(message.sendImage)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
-                        .padding(EdgeInsets(top: 0, leading:0, bottom: 30, trailing: 0))
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    if message.sendText.isEmpty == false {
-                        Text(message.sendText)
-                            .padding(EdgeInsets(top: 8, leading: 0, bottom: 20, trailing: 0))
-                            .foregroundColor(Color.primary)
-                            .clipShape(ChatBubble(isFromCurrentUser: true))
-                    }
-                    if message.responseText != nil {
-                        Divider()
-                        HStack(spacing: 16) {
-                            VStack(alignment: .leading, spacing: 4) {
-                                if let error = message.responseError {
-                                    Text("Error: \(error)")
-                                        .foregroundColor(.red)
-                                } else {
-                                    Text(message.responseText!)
-                                        .foregroundColor(Color.primary)
-                                        
-                                        .clipShape(ChatBubble(isFromCurrentUser: false))
-                                }
-                                if message.isInteractingWithChatGPT {
-                                    ProgressView()
-                                        .progressViewStyle(CircularProgressViewStyle(tint: Color.gray))
-                                        .frame(width: 20, height: 20)
-                                }
-                            }
-                        }
-                    }
-                }
+            messageRow(text: message.sendText, image: message.sendImage, bgColor: colorScheme == .light ? .white : Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 0.5))
+            
+            if let text = message.responseText {
+                Divider()
+                messageRow(text: text, image: message.responseImage, bgColor: colorScheme == .light ? .gray.opacity(0.1) : Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 1), responseError: message.responseError, showDotLoading: message.isInteractingWithChatGPT)
+                Divider()
             }
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-            .frame(maxWidth: .infinity, alignment: message.isInteractingWithChatGPT ? .trailing : .leading)
-            .background(colorScheme == .light ? Color.white : Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 0.5))
-            .cornerRadius(16)
-            .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray, lineWidth: 1))
-            .padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+        }
+    }
+    
+    func messageRow(text: String, image: String, bgColor: Color, responseError: String? = nil, showDotLoading: Bool = false) -> some View {
+        #if os(watchOS)
+        VStack(alignment: .leading, spacing: 8) {
+            messageRowContent(text: text, image: image, responseError: responseError, showDotLoading: showDotLoading)
+        }
+        
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(bgColor)
+        #else
+        HStack(alignment: .top, spacing: 24) {
+            messageRowContent(text: text, image: image, responseError: responseError, showDotLoading: showDotLoading)
+        }
+        #if os(tvOS)
+        .padding(32)
+        #else
+        .padding(16)
+        #endif
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(bgColor)
+        #endif
+    }
+    
+    @ViewBuilder
+    func messageRowContent(text: String, image: String, responseError: String? = nil, showDotLoading: Bool = false) -> some View {
+        if image.hasPrefix("http"), let url = URL(string: image) {
+            AsyncImage(url: url) { image in
+                image
+                    .resizable()
+                    .frame(width: imageSize.width, height: imageSize.height)
+            } placeholder: {
+                ProgressView()
+            }
+
+        } else {
+            Image(image)
+                .resizable()
+                .frame(width: imageSize.width, height: imageSize.height)
+        }
+        
+        VStack(alignment: .leading) {
+            if !text.isEmpty {
+                #if os(tvOS)
+                responseTextView(text: text)
+                #else
+                Text(text)
+                    .multilineTextAlignment(.leading)
+                    #if os(iOS) || os(macOS)
+                    .textSelection(.enabled)
+                    #endif
+                #endif
+            }
+            
+            if let error = responseError {
+                Text("Error: \(error)")
+                    .foregroundColor(.red)
+                    .multilineTextAlignment(.leading)
+                
+                Button("Regenerate response") {
+                    retryCallback(message)
+                }
+                .foregroundColor(.accentColor)
+                .padding(.top)
+            }
             
             HStack {
-                            Spacer()
-                            Button(action: {
-                                UIPasteboard.general.string = message.sendText.isEmpty ? message.responseText ?? "" : message.responseText
-                            }, label: {
-                                Image(systemName: "doc.on.doc")
-                                    .foregroundColor(Color.gray)
-                            })
-                            .buttonStyle(BorderlessButtonStyle())
-                            .padding(.trailing, 16)
-                        }
+                                        Spacer()
+                                        Button(action: {
+                                            UIPasteboard.general.string = message.sendText.isEmpty ? message.responseText ?? "" : message.responseText
+                                        }, label: {
+                                            Image(systemName: "doc.on.doc")
+                                                .foregroundColor(Color.gray)
+                                        })
+                                        .buttonStyle(BorderlessButtonStyle())
+                                        .padding(.trailing, 16)
+                                    }
+            
+            if showDotLoading {
+                #if os(tvOS)
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .padding()
+                #else
+                DotLoadingView()
+                    .frame(width: 60, height: 30)
+                #endif
+                
+            }
         }
     }
-}
-
-struct ChatBubble: Shape {
-    var isFromCurrentUser: Bool
     
-    func path(in rect: CGRect) -> Path {
-        let cornerRadius: CGFloat = 0
-        let arrowSize = CGSize(width: 8, height: 8)
-        let arrowPosition: CGFloat = -20
+    #if os(tvOS)
+    private func rowsFor(text: String) -> [String] {
+        var rows = [String]()
+        let maxLinesPerRow = 8
+        var currentRowText = ""
+        var currentLineSum = 0
         
-        var path = Path()
-        
-        if isFromCurrentUser {
-            path.move(to: CGPoint(x: rect.minX, y: rect.minY + cornerRadius))
-            path.addArc(center: CGPoint(x: rect.minX + cornerRadius, y: rect.minY + cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: -90), endAngle: Angle(degrees: 180), clockwise: false)
-            path.addLine(to: CGPoint(x: rect.maxX - arrowPosition - arrowSize.width, y: rect.minY))
-            path.addLine(to: CGPoint(x: rect.maxX - arrowPosition, y: rect.minY - arrowSize.height))
-            path.addLine(to: CGPoint(x: rect.maxX - arrowPosition, y: rect.minY + cornerRadius))
-            path.addArc(center: CGPoint(x: rect.maxX - cornerRadius, y: rect.minY + cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: -90), endAngle: Angle(degrees: 0), clockwise: false)
-            path.addArc(center: CGPoint(x: rect.maxX - cornerRadius, y: rect.maxY - cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 90), clockwise: false)
-            path.addArc(center: CGPoint(x: rect.minX + cornerRadius, y: rect.maxY - cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: 90), endAngle: Angle(degrees: 180), clockwise: false)
-            path.addArc(center: CGPoint(x: rect.minX + cornerRadius, y: rect.minY + cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
-            path.closeSubpath()
-        } else {
-            path.move(to: CGPoint(x: rect.minX + arrowPosition, y: rect.minY + cornerRadius))
-            path.addArc(center: CGPoint(x: rect.minX + cornerRadius, y: rect.minY + cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: -90), endAngle: Angle(degrees: 180), clockwise: false)
-            path.addArc(center: CGPoint(x: rect.maxX - cornerRadius, y: rect.minY + cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
-            path.addArc(center: CGPoint(x: rect.maxX - cornerRadius, y: rect.maxY - cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 90), clockwise: false)
-            path.addArc(center: CGPoint(x: rect.minX + cornerRadius, y: rect.maxY - cornerRadius), radius: cornerRadius, startAngle: Angle(degrees: 90), endAngle: Angle(degrees: 180), clockwise: false)
-            path.addLine(to: CGPoint(x: rect.minX + arrowPosition + arrowSize.width, y: rect.maxY))
-            path.addLine(to: CGPoint(x: rect.minX + arrowPosition, y: rect.maxY - arrowSize.height))
-            path.addLine(to: CGPoint(x: rect.minX + arrowPosition, y: rect.minY + cornerRadius))
-            path.closeSubpath()
+        for char in text {
+            currentRowText += String(char)
+            if char == "\n" {
+                currentLineSum += 1
+            }
+            
+            if currentLineSum >= maxLinesPerRow {
+                rows.append(currentRowText)
+                currentLineSum = 0
+                currentRowText = ""
+            }
         }
-        
-        return path
+
+        rows.append(currentRowText)
+        return rows
     }
+    
+    
+    func responseTextView(text: String) -> some View {
+        ForEach(rowsFor(text: text), id: \.self) { text in
+            Text(text)
+                .focusable()
+                .multilineTextAlignment(.leading)
+        }
+    }
+    #endif
     
 }
 
@@ -160,6 +209,7 @@ struct MessageRowView_Previews: PreviewProvider {
         }
     }
 }
+
 
 /*
  This code is written in Swift and is a part of a larger project that is responsible for creating a chat interface that interacts with an OpenAI language model (ChatGPT). The specific code contains a SwiftUI view called MessageRowView which is responsible for displaying a single message row in the chat interface.
