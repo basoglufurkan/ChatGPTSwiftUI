@@ -9,55 +9,70 @@ import SwiftUI
 import RevenueCat
 import FirebaseCore
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
-}
+//class AppDelegate: NSObject, UIApplicationDelegate {
+//  func application(_ application: UIApplication,
+//                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+//    FirebaseApp.configure()
+//
+//    return true
+//  }
+//}
 
 @main
 struct XCAChatGPTApp: App {
     
-    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
+    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
     @StateObject var userViewModel = UserViewModel()
     @State private var showLaunchView: Bool = true
-
-  
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    init() {
+        FirebaseApp.configure()
+        Purchases.logLevel = .debug
+        Purchases.configure(
+            with: Configuration.Builder(withAPIKey: "appl_cbNcPHgHiKKFSGXpPtEXfvtwlqR")
+                .with(usesStoreKit2IfAvailable: true)
+                .build()
+        )
+        
+        //        Purchases.logLevel = .debug
+        Purchases.configure(withAPIKey: "appl_cbNcPHgHiKKFSGXpPtEXfvtwlqR")
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
+        UINavigationBar.appearance().tintColor = UIColor(Color.theme.accent)
+        UITableView.appearance().backgroundColor = UIColor.clear
+    }
+    
+    //    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             /*
              ContentView(vm: vm)
-                 .toolbar {
-                     ToolbarItem {
-                         Button("Clear") {
-                             vm.clearMessages()
-                         }
-                         .disabled(vm.isInteractingWithChatGPT)
-                     }
-                 }
-                 .environmentObject(userViewModel)
+             .toolbar {
+             ToolbarItem {
+             Button("Clear") {
+             vm.clearMessages()
+             }
+             .disabled(vm.isInteractingWithChatGPT)
+             }
+             }
+             .environmentObject(userViewModel)
              */
             ZStack {
-//                NavigationView {
-                    ContentView(vm: vm)
-                        .toolbar {
-                            ToolbarItem {
-                                Button("Clear") {
-                                    vm.clearMessages()
-                                }
-                                .disabled(vm.isInteractingWithChatGPT)
+                //                NavigationView {
+                ContentView(vm: vm)
+                    .toolbar {
+                        ToolbarItem {
+                            Button("Clear") {
+                                vm.clearMessages()
                             }
+                            .disabled(vm.isInteractingWithChatGPT)
                         }
-                        .environmentObject(userViewModel)
-//                }
-//                .navigationViewStyle(StackNavigationViewStyle())
+                    }
+                    .environmentObject(userViewModel)
+                //                }
+                //                .navigationViewStyle(StackNavigationViewStyle())
                 
-
+                
                 ZStack {
                     if showLaunchView {
                         LaunchView(showLaunchView: $showLaunchView)
@@ -67,17 +82,10 @@ struct XCAChatGPTApp: App {
                 .zIndex(2.0)
             }
             
-                
+            
             
         }
     }
     
-    init() {
-        Purchases.logLevel = .debug
-        Purchases.configure(withAPIKey: "appl_cbNcPHgHiKKFSGXpPtEXfvtwlqR")
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.theme.accent)]
-        UINavigationBar.appearance().tintColor = UIColor(Color.theme.accent)
-        UITableView.appearance().backgroundColor = UIColor.clear
-    }
+    
 }

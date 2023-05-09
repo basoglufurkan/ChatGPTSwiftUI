@@ -7,7 +7,7 @@
 */
 
 "localizedText" = "Invia messaggio";
-"trial" = "Prova gratuita di 3 giorni";
+"trial" = "Prova gratuita di 3 giorni(mensile e annuale)";
 "text1" = "Utilizzo illimitato / Domande e risposte";
 "text2" = "Alimentato da GPT";
 "text3" = "Limite di parole più alto";
@@ -17,3 +17,101 @@
 "month" = "mese";
 "year" = "anno";
 "info" = "Goditi conversazioni illimitate, limiti di parole più elevati e sblocca il pieno potenziale di uno dei modelli di intelligenza artificiale più capaci al mondo.";
+"privacy" = "**Politica sulla riservatezza**
+
+Yaren Basoglu ha creato l'app Zetron - AI Chatbot come app gratuita. Questo SERVIZIO è fornito da Yaren Basoglu gratuitamente ed è destinato all'uso così com'è.
+
+Questa pagina viene utilizzata per informare i visitatori in merito alle mie politiche con la raccolta, l'uso e la divulgazione di informazioni personali se qualcuno decide di utilizzare il mio servizio.
+
+Se scegli di utilizzare il mio Servizio, accetti la raccolta e l'utilizzo delle informazioni in relazione a questa politica. Le informazioni personali che raccolgo vengono utilizzate per fornire e migliorare il servizio. Non userò né condividerò le tue informazioni con nessuno, ad eccezione di quanto descritto nella presente Informativa sulla privacy.
+
+I termini utilizzati nella presente Informativa sulla privacy hanno lo stesso significato dei nostri Termini e condizioni, accessibili su Zetron - AI Chatbot se non diversamente definito nella presente Informativa sulla privacy.
+
+**Raccolta e utilizzo delle informazioni**
+
+Per una migliore esperienza, durante l'utilizzo del nostro Servizio, potrei richiederti di fornirci alcune informazioni di identificazione personale. Le informazioni che richiedo verranno conservate sul tuo dispositivo e non vengono raccolte da me in alcun modo.
+
+L'app utilizza servizi di terze parti che potrebbero raccogliere informazioni utilizzate per identificarti.
+
+Link alla privacy policy dei fornitori di servizi terzi utilizzati dall'app
+
+* [Google Analytics per Firebase](https://firebase.google.com/policies/analytics)
+* [Firebase Crashlytics](https://firebase.google.com/support/privacy/)
+* [RevenueCat](https://www.revenuecat.com/privacy)
+
+**Dati di registro**
+
+Voglio informarti che ogni volta che utilizzi il mio Servizio, in caso di errore nell'app raccolgo dati e informazioni (tramite prodotti di terze parti) sul tuo telefono chiamati Log Data. Questi dati di registro possono includere informazioni come l'indirizzo del protocollo Internet (\"IP\") del dispositivo, il nome del dispositivo, la versione del sistema operativo, la configurazione dell'app quando si utilizza il mio servizio, l'ora e la data dell'utilizzo del servizio e altre statistiche .
+
+**Biscotti**
+
+I cookie sono file con una piccola quantità di dati che vengono comunemente utilizzati come identificatori univoci anonimi. Questi vengono inviati al tuo browser dai siti web che visiti e vengono memorizzati nella memoria interna del tuo dispositivo.
+
+Questo Servizio non utilizza questi \"cookie\" in modo esplicito. Tuttavia, l'app può utilizzare codice e librerie di terze parti che utilizzano \"cookie\" per raccogliere informazioni e migliorare i propri servizi. Hai la possibilità di accettare o rifiutare questi cookie e sapere quando un cookie viene inviato al tuo dispositivo. Se scegli di rifiutare i nostri cookie, potresti non essere in grado di utilizzare alcune parti di questo Servizio.
+
+**Fornitori di servizi**
+
+Potrei assumere società e individui di terze parti per i seguenti motivi:
+
+* Per facilitare il nostro Servizio;
+* Per fornire il Servizio per nostro conto;
+* Per eseguire servizi relativi al servizio; O
+* Per aiutarci ad analizzare come viene utilizzato il nostro Servizio.
+
+Desidero informare gli utenti di questo Servizio che queste terze parti hanno accesso alle loro Informazioni personali. Il motivo è svolgere i compiti loro assegnati per nostro conto. Tuttavia, sono obbligati a non divulgare o utilizzare le informazioni per qualsiasi altro scopo.
+
+**Sicurezza**
+
+Apprezzo la tua fiducia nel fornirci le tue informazioni personali, quindi ci sforziamo di utilizzare mezzi commercialmente accettabili per proteggerle. Ma ricorda che nessun metodo di trasmissione su Internet o metodo di archiviazione elettronica è sicuro e affidabile al 100% e non posso garantirne l'assoluta sicurezza.
+
+**Collegamenti ad altri siti**
+
+Questo Servizio può contenere collegamenti ad altri siti. Se fai clic su un collegamento di terze parti, verrai indirizzato a quel sito. Tieni presente che questi siti esterni non sono gestiti da me. Pertanto, ti consiglio vivamente di rivedere la Privacy Policy di questi siti web. Non ho alcun controllo e non mi assumo alcuna responsabilità per il contenuto, le politiche sulla privacy o le pratiche di qualsiasi sito o servizio di terze parti.
+
+**Privacy dei bambini**
+
+Questi Servizi non si rivolgono a persone di età inferiore ai 13 anni. Non raccolgo consapevolmente informazioni di identificazione personale da bambini di età inferiore ai 13 anni. Nel caso in cui scopro che un bambino di età inferiore ai 13 anni mi ha fornito informazioni personali, le elimino immediatamente dai nostri server. Se sei un genitore o un tutore e sei consapevole che tuo figlio ci ha fornito informazioni personali, contattami in modo che io possa fare le azioni necessarie.
+
+**Modifiche alla presente Informativa sulla privacy**
+
+Potrei aggiornare la nostra Informativa sulla privacy di tanto in tanto. Pertanto, si consiglia di rivedere periodicamente questa pagina per eventuali modifiche. Ti informerò di eventuali modifiche pubblicando la nuova Informativa sulla privacy in questa pagina.
+
+Questa politica è in vigore dal 2023-04-07
+
+**Contattaci**
+
+In caso di domande o suggerimenti sulla mia Informativa sulla privacy, non esitare a contattarmi all'indirizzo appxmobile.info@gmail.com.
+
+Questa pagina della politica sulla privacy è stata creata su [privacypolicytemplate.net](https://privacypolicytemplate.net) e modificata/generata da [App Privacy Policy Generator](https://app-privacy-policy-generator.nisrulz.com/)";
+
+"term" = "**Termini & Condizioni**
+
+Scaricando o utilizzando l'app, questi termini si applicheranno automaticamente a te: assicurati quindi di leggerli attentamente prima di utilizzare l'app. Non è consentito copiare o modificare l'app, alcuna parte dell'app o i nostri marchi in alcun modo. Non sei autorizzato a tentare di estrarre il codice sorgente dell'app e non dovresti nemmeno provare a tradurre l'app in altre lingue o creare versioni derivate. L'app stessa e tutti i marchi, i diritti d'autore, i diritti sui database e altri diritti di proprietà intellettuale ad essa correlati appartengono ancora a Yaren Basoglu.
+
+Yaren Basoglu si impegna a garantire che l'app sia il più utile ed efficiente possibile. Per questo motivo, ci riserviamo il diritto di apportare modifiche all'app o di addebitare i suoi servizi, in qualsiasi momento e per qualsiasi motivo. Non ti addebiteremo mai l'app o i suoi servizi senza chiarirti esattamente per cosa stai pagando.
+
+L'app Zetron - AI Chatbot archivia ed elabora i dati personali che ci hai fornito per fornire il mio Servizio. È tua responsabilità proteggere il tuo telefono e l'accesso all'app. Ti consigliamo quindi di non eseguire il jailbreak o il root del tuo telefono, che è il processo di rimozione delle restrizioni e limitazioni del software imposte dal sistema operativo ufficiale del tuo dispositivo. Potrebbe rendere il tuo telefono vulnerabile a malware/virus/programmi dannosi, compromettere le funzionalità di sicurezza del tuo telefono e potrebbe significare che l'app Zetron - AI Chatbot non funzionerà correttamente o non funzionerà affatto.
+
+L'app utilizza servizi di terze parti che dichiarano i propri Termini e condizioni.
+
+Collegamento a Termini e condizioni dei fornitori di servizi di terze parti utilizzati dall'app
+
+* [Google Analytics per Firebase](https://firebase.google.com/terms/analytics)
+* [Firebase Crashlytics](https://firebase.google.com/terms/crashlytics)
+* [RevenueCat](https://www.revenuecat.com/terms)
+
+Dovresti essere consapevole che ci sono alcune cose di cui Yaren Basoglu non si assumerà la responsabilità. Alcune funzioni dell'app richiedono che l'app disponga di una connessione Internet attiva. La connessione può essere Wi-Fi o fornita dal tuo gestore di rete mobile, ma Yaren Basoglu non può assumersi la responsabilità per il mancato funzionamento dell'app a piena funzionalità se non hai accesso al Wi-Fi e non hai nessuno dei tuoi spazio dati rimasto.
+
+Se stai utilizzando l'app al di fuori di un'area con Wi-Fi, tieni presente che i termini dell'accordo con il tuo gestore di rete mobile continueranno ad essere applicati. Di conseguenza, il tuo gestore di telefonia mobile potrebbe addebitarti il costo dei dati per la durata della connessione durante l'accesso all'app o altri addebiti di terze parti. Utilizzando l'app, accetti la responsabilità di eventuali addebiti di questo tipo, inclusi gli addebiti per i dati in roaming se utilizzi l'app al di fuori del tuo territorio nazionale (ovvero regione o paese) senza disattivare il roaming dei dati. Se non sei il pagatore del conto per il dispositivo su cui stai utilizzando l'app, tieni presente che presumiamo che tu abbia ricevuto il permesso dal pagatore per l'utilizzo dell'app.
+
+Allo stesso modo, Yaren Basoglu non può sempre assumersi la responsabilità del modo in cui utilizzi l'app, ad esempio devi assicurarti che il tuo dispositivo rimanga carico, se si esaurisce la batteria e non puoi accenderlo per usufruire del Servizio, Yaren Basoglu non può assumersi la responsabilità.
+
+Per quanto riguarda la responsabilità di Yaren Basoglu per l'utilizzo dell'app da parte dell'utente, quando si utilizza l'app, è importante tenere presente che, sebbene ci sforziamo di garantire che sia sempre aggiornato e corretto, ci affidiamo a terze parti per fornirci informazioni in modo che possiamo metterle a vostra disposizione. Yaren Basoglu non si assume alcuna responsabilità per eventuali perdite, dirette o indirette, subite a causa dell'affidamento totale a questa funzionalità dell'app.
+
+Ad un certo punto, potremmo voler aggiornare l'app. L'app è attualmente disponibile su iOS: i requisiti per il sistema (e per eventuali sistemi aggiuntivi a cui decidiamo di estendere la disponibilità dell'app) potrebbero cambiare e dovrai scaricare gli aggiornamenti se desideri continuare a utilizzare l'app . Yaren Basoglu non promette che aggiornerà sempre l'app in modo che sia pertinente per te e/o funzioni con la versione iOS che hai installato sul tuo dispositivo. Tuttavia, prometti di accettare sempre gli aggiornamenti dell'applicazione quando ti vengono offerti. Potremmo anche voler interrompere la fornitura dell'app e potremmo interromperne l'utilizzo in qualsiasi momento senza darti preavviso di risoluzione. A meno che non vi diciamo diversamente, in caso di risoluzione, (a) i diritti e le licenze concessi all'utente in questi termini cesseranno; (b) devi smettere di usare l'app e (se necessario) eliminarla dal tuo dispositivo.
+
+**Modifiche a questi termini e condizioni**
+
+Potrei aggiornare i nostri Termini e condizioni di tanto in tanto. Pertanto, si consiglia di rivedere periodicamente questa pagina per eventuali modifiche. Ti informerò di eventuali modifiche pubblicando i nuovi Termini e condizioni in questa pagina.
+
+Questi termini e condizioni sono in vigore dal 07-04-2023";

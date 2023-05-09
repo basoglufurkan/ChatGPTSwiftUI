@@ -54,7 +54,7 @@ class ChatGPTAPI: @unchecked Sendable {
     private func generateMessages(from text: String) -> [Message] {
         var messages = [systemMessage] + historyList + [Message(role: "user", content: text)]
         
-        if messages.contentCount > (4000 * 4) {
+        if messages.contentCount > (8000 * 4) {
             _ = historyList.removeFirst()
             messages = generateMessages(from: text)
         }
@@ -170,4 +170,29 @@ extension String: CustomNSError {
  sendMessage metodu, kullanıcının gönderdiği metni OpenAI API'sine gönderir ve yanıtı döndürür. sendMessageStream metodu ise aynı işlemi yapar, ancak sonuçları bir akış halinde döndürür. Her iki metot da farklı hataların fırlatılması durumunda throw anahtar kelimesini kullanır.
 
  Ayrıca, deleteHistoryList metodu, daha önce yapılan sohbet geçmişini temizlemek için kullanılabilir.
+ Kod, aşağıdaki temel bileşenlere sahiptir:
+
+ systemMessage: Yardımcı asistanın sistem mesajını temsil eden bir Message nesnesi.
+ temperature: Metin tamamlama sırasında kullanılan sıcaklık değerini temsil eden bir Double.
+ model: Kullanılacak dil modelini temsil eden bir String.
+ apiKey: OpenAI API'sine yetkilendirme yapmak için kullanılan bir API anahtarı.
+ historyList: Sohbet geçmişini tutan bir Message dizisi.
+ urlSession: URL işlemleri için kullanılan bir URLSession nesnesi.
+ dateFormatter: Tarih formatını ayarlamak için kullanılan bir DateFormatter nesnesi.
+ jsonDecoder: JSON verilerini çözmek için kullanılan bir JSONDecoder nesnesi.
+ headers: API isteğine eklenen HTTP başlıklarını temsil eden bir sözlük.
+ Message: Bir sohbet mesajını temsil eden bir yapı.
+ Request: API isteği için kullanılan veri modelini temsil eden bir yapı.
+ ErrorRootResponse: API hatalarını temsil eden bir yapı.
+ CompletionResponse: Tamamlama API yanıtını temsil eden bir yapı.
+ Ayrıca ChatGPTAPI sınıfı, aşağıdaki yöntemlere sahiptir:
+
+ init: Sınıfın başlatıcı yöntemi. API anahtarı, dil modeli, sistem mesajı ve sıcaklık gibi parametreleri alır ve sınıfın özelliklerini ayarlar.
+ generateMessages: Metin girişine göre bir mesaj listesi oluşturan özel bir yöntem.
+ jsonBody: API isteği için JSON veri gövdesini oluşturan özel bir yöntem.
+ appendToHistoryList: Kullanıcı ve asistan mesajlarını geçmişe ekleyen bir yardımcı yöntem.
+ sendMessageStream: Metin tabanlı sohbeti asenkron olarak başlatan ve sonuçları bir akışta döndüren bir yöntem.
+ sendMessage: Metin tabanlı sohbeti tamamlamak için kullanılan bir yöntem.
+ deleteHistoryList: Geçmiş mesajları temizleyen bir yöntem.
+ Kod aynı zamanda String sınıfına CustomNSError protokolünü uygulayan bir uzantı da içerir. Bu, hatalı durumlarda kullanıcıya hata mesajları sağlamak için kullanılır.
  */

@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct XCAChatGPTWatch_Watch_AppApp: App {
     
-    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
+    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
     
     var body: some Scene {
         WindowGroup {

@@ -7,7 +7,7 @@
 */
 
 "localizedText" = "Envoyer un message";
-"trial" = "Essayez gratuitement pendant 3 jours";
+"trial" = "Essayez gratuitement pendant 3 jours(Mensuel et Annuel)";
 "text1" = "Utilisation illimitée / Questions et réponses";
 "text2" = "Alimenté par GPT";
 "text3" = "Limite de mots supérieure";
@@ -17,3 +17,101 @@
 "month" = "mois";
 "year" = "an";
 "info" = "Profitez de conversations illimitées, de limites de mots plus élevées et débloquez tout le potentiel de l'un des modèles d'intelligence artificielle les plus performants au monde.";
+"privacy" = "**Politique de confidentialité**
+
+Yaren Basoglu a créé l'application Zetron - AI Chatbot en tant qu'application gratuite. Ce SERVICE est fourni gratuitement par Yaren Basoglu et est destiné à être utilisé tel quel.
+
+Cette page est utilisée pour informer les visiteurs de mes politiques de collecte, d'utilisation et de divulgation des informations personnelles si quelqu'un décide d'utiliser mon service.
+
+Si vous choisissez d'utiliser mon service, vous acceptez la collecte et l'utilisation d'informations en relation avec cette politique. Les informations personnelles que je collecte sont utilisées pour fournir et améliorer le service. Je n'utiliserai ni ne partagerai vos informations avec qui que ce soit, sauf de la manière décrite dans la présente politique de confidentialité.
+
+Les termes utilisés dans la présente politique de confidentialité ont la même signification que dans nos conditions générales, qui sont accessibles sur Zetron - AI Chatbot, sauf indication contraire dans la présente politique de confidentialité.
+
+**Collecte et utilisation des informations**
+
+Pour une meilleure expérience, lors de l'utilisation de notre service, je peux vous demander de nous fournir certaines informations personnellement identifiables. Les informations que je demande seront conservées sur votre appareil et ne seront en aucun cas collectées par moi.
+
+L'application utilise des services tiers qui peuvent collecter des informations utilisées pour vous identifier.
+
+Lien vers la politique de confidentialité des fournisseurs de services tiers utilisés par l'application
+
+* [Google Analytics pour Firebase](https://firebase.google.com/policies/analytics)
+* [Firebase Crashlytics](https://firebase.google.com/support/privacy/)
+* [RevenueCat](https://www.revenuecat.com/privacy)
+
+**Données de journal**
+
+Je tiens à vous informer que chaque fois que vous utilisez mon service, en cas d'erreur dans l'application, je collecte des données et des informations (via des produits tiers) sur votre téléphone, appelées Log Data. Ces données de journal peuvent inclure des informations telles que l'adresse de protocole Internet (\"IP\") de votre appareil, le nom de l'appareil, la version du système d'exploitation, la configuration de l'application lors de l'utilisation de mon service, l'heure et la date de votre utilisation du service et d'autres statistiques. .
+
+**Biscuits**
+
+Les cookies sont des fichiers contenant une petite quantité de données qui sont couramment utilisés comme identifiants uniques anonymes. Ceux-ci sont envoyés à votre navigateur à partir des sites Web que vous visitez et sont stockés dans la mémoire interne de votre appareil.
+
+Ce Service n'utilise pas explicitement ces « cookies ». Cependant, l'application peut utiliser du code tiers et des bibliothèques qui utilisent des \"cookies\" pour collecter des informations et améliorer leurs services. Vous avez la possibilité d'accepter ou de refuser ces cookies et de savoir quand un cookie est envoyé sur votre appareil. Si vous choisissez de refuser nos cookies, vous ne pourrez peut-être pas utiliser certaines parties de ce Service.
+
+**Les fournisseurs de services**
+
+Je peux faire appel à des sociétés tierces et à des particuliers pour les raisons suivantes :
+
+* Pour faciliter notre Service ;
+* Pour fournir le Service en notre nom ;
+* Pour effectuer des services liés au service ; ou
+* Pour nous aider à analyser comment notre Service est utilisé.
+
+Je souhaite informer les utilisateurs de ce service que ces tiers ont accès à leurs informations personnelles. La raison est d'accomplir les tâches qui leur sont confiées en notre nom. Cependant, ils sont tenus de ne pas divulguer ou utiliser les informations à d'autres fins.
+
+**Sécurité**
+
+J'apprécie votre confiance en nous fournissant vos informations personnelles, nous nous efforçons donc d'utiliser des moyens commercialement acceptables pour les protéger. Mais rappelez-vous qu'aucune méthode de transmission sur Internet ou méthode de stockage électronique n'est sûre et fiable à 100 %, et je ne peux pas garantir sa sécurité absolue.
+
+**Liens vers d'autres sites**
+
+Ce Service peut contenir des liens vers d'autres sites. Si vous cliquez sur un lien tiers, vous serez dirigé vers ce site. Notez que ces sites externes ne sont pas exploités par moi. Par conséquent, je vous conseille vivement de consulter la politique de confidentialité de ces sites Web. Je n'ai aucun contrôle et n'assume aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques des sites ou services tiers.
+
+**Confidentialité des enfants**
+
+Ces Services ne s'adressent à personne de moins de 13 ans. Je ne collecte pas sciemment d'informations personnellement identifiables auprès d'enfants de moins de 13 ans. Dans le cas où je découvre qu'un enfant de moins de 13 ans m'a fourni des informations personnelles, je les supprime immédiatement de nos serveurs. Si vous êtes un parent ou un tuteur et que vous savez que votre enfant nous a fourni des informations personnelles, veuillez me contacter afin que je puisse faire les actions nécessaires.
+
+**Modifications de cette politique de confidentialité**
+
+Je peux mettre à jour notre politique de confidentialité de temps à autre. Ainsi, il vous est conseillé de consulter cette page périodiquement pour tout changement. Je vous informerai de tout changement en publiant la nouvelle politique de confidentialité sur cette page.
+
+Cette politique est effective à partir du 2023-04-07
+
+**Contactez-nous**
+
+Si vous avez des questions ou des suggestions concernant ma politique de confidentialité, n'hésitez pas à me contacter à appxmobile.info@gmail.com.
+
+Cette page de politique de confidentialité a été créée sur [privacypolicytemplate.net](https://privacypolicytemplate.net) et modifiée/générée par [App Privacy Policy Generator](https://app-privacy-policy-generator.nisrulz.com/)";
+
+"term" = "**Termes et conditions**
+
+En téléchargeant ou en utilisant l'application, ces conditions s'appliqueront automatiquement à vous - vous devez donc vous assurer de les lire attentivement avant d'utiliser l'application. Vous n'êtes pas autorisé à copier ou modifier l'application, toute partie de l'application ou nos marques de commerce de quelque manière que ce soit. Vous n'êtes pas autorisé à tenter d'extraire le code source de l'application, et vous ne devez pas non plus essayer de traduire l'application dans d'autres langues ou de créer des versions dérivées. L'application elle-même, ainsi que toutes les marques, droits d'auteur, droits de base de données et autres droits de propriété intellectuelle qui s'y rapportent, appartiennent toujours à Yaren Basoglu.
+
+Yaren Basoglu s'engage à faire en sorte que l'application soit aussi utile et efficace que possible. Pour cette raison, nous nous réservons le droit d'apporter des modifications à l'application ou de facturer ses services, à tout moment et pour quelque raison que ce soit. Nous ne vous facturerons jamais l'application ou ses services sans vous indiquer très clairement ce que vous payez.
+
+L'application Zetron - AI Chatbot stocke et traite les données personnelles que vous nous avez fournies, pour fournir mon Service. Il est de votre responsabilité de protéger votre téléphone et l'accès à l'application. Nous vous recommandons donc de ne pas jailbreaker ou rooter votre téléphone, qui est le processus de suppression des restrictions et limitations logicielles imposées par le système d'exploitation officiel de votre appareil. Cela pourrait rendre votre téléphone vulnérable aux logiciels malveillants/virus/programmes malveillants, compromettre les fonctionnalités de sécurité de votre téléphone et cela pourrait signifier que l'application Zetron - AI Chatbot ne fonctionnera pas correctement ou pas du tout.
+
+L'application utilise des services tiers qui déclarent leurs termes et conditions.
+
+Lien vers les conditions générales des fournisseurs de services tiers utilisés par l'application
+
+* [Google Analytics pour Firebase](https://firebase.google.com/terms/analytics)
+* [Firebase Crashlytics](https://firebase.google.com/terms/crashlytics)
+* [RevenueCat](https://www.revenuecat.com/terms)
+
+Vous devez savoir qu'il y a certaines choses dont Yaren Basoglu n'assumera aucune responsabilité. Certaines fonctions de l'application nécessitent que l'application dispose d'une connexion Internet active. La connexion peut être Wi-Fi ou fournie par votre fournisseur de réseau mobile, mais Yaren Basoglu ne peut pas assumer la responsabilité du fait que l'application ne fonctionne pas à pleine fonctionnalité si vous n'avez pas accès au Wi-Fi et que vous n'avez aucun de vos allocation de données restante.
+
+Si vous utilisez l'application en dehors d'une zone Wi-Fi, n'oubliez pas que les termes de l'accord avec votre fournisseur de réseau mobile s'appliqueront toujours. Par conséquent, votre opérateur de téléphonie mobile peut vous facturer le coût des données pour la durée de la connexion lors de l'accès à l'application, ou d'autres frais tiers. En utilisant l'application, vous acceptez la responsabilité de ces frais, y compris les frais de données en itinérance si vous utilisez l'application en dehors de votre territoire d'origine (c'est-à-dire votre région ou votre pays) sans désactiver l'itinérance des données. Si vous n'êtes pas le payeur de la facture de l'appareil sur lequel vous utilisez l'application, sachez que nous supposons que vous avez reçu l'autorisation du payeur de la facture pour utiliser l'application.
+
+Dans le même ordre d'idées, Yaren Basoglu ne peut pas toujours assumer la responsabilité de la manière dont vous utilisez l'application, c'est-à-dire que vous devez vous assurer que votre appareil reste chargé - s'il est à court de batterie et que vous ne pouvez pas l'allumer pour bénéficier du service, Yaren Basoglu décline toute responsabilité.
+
+En ce qui concerne la responsabilité de Yaren Basoglu pour votre utilisation de l'application, lorsque vous utilisez l'application, il est important de garder à l'esprit que même si nous nous efforçons de nous assurer qu'elle est mise à jour et correcte à tout moment, nous comptons sur des tiers pour nous fournir des informations afin que nous puissions les mettre à votre disposition. Yaren Basoglu n'accepte aucune responsabilité pour toute perte, directe ou indirecte, que vous subissez en vous fiant entièrement à cette fonctionnalité de l'application.
+
+À un moment donné, nous souhaiterons peut-être mettre à jour l'application. L'application est actuellement disponible sur iOS - les exigences pour le système (et pour tous les systèmes supplémentaires auxquels nous décidons d'étendre la disponibilité de l'application) peuvent changer, et vous devrez télécharger les mises à jour si vous souhaitez continuer à utiliser l'application . Yaren Basoglu ne promet pas de toujours mettre à jour l'application afin qu'elle soit pertinente pour vous et/ou fonctionne avec la version iOS que vous avez installée sur votre appareil. Cependant, vous vous engagez à toujours accepter les mises à jour de l'application lorsqu'elles vous sont proposées. Nous pouvons également souhaiter cesser de fournir l'application et mettre fin à son utilisation à tout moment sans préavis de résiliation. Sauf indication contraire de notre part, en cas de résiliation, (a) les droits et licences qui vous sont accordés dans les présentes conditions prendront fin ; (b) vous devez cesser d'utiliser l'application et (si nécessaire) la supprimer de votre appareil.
+
+**Modifications de ces termes et conditions**
+
+Je peux mettre à jour nos Termes et Conditions de temps à autre. Ainsi, il vous est conseillé de consulter cette page périodiquement pour tout changement. Je vous informerai de tout changement en publiant les nouvelles conditions générales sur cette page.
+
+Ces termes et conditions sont en vigueur à compter du 2023-04-07";

@@ -11,7 +11,6 @@ import StoreKit
 
 struct ContentView: View {
     
-    //    @Environment(\.requestReview) var requestReview
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var vm: ViewModel
     @FocusState var isTextFieldFocused: Bool
@@ -22,7 +21,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             chatListView
-                .navigationTitle("Synthia AI")
+                .navigationTitle("ChatGenius")
             
         }
         .navigationViewStyle(.stack)
@@ -34,37 +33,6 @@ struct ContentView: View {
                 ScrollView {
                     LazyVStack(spacing: 0) {
                         
-                        /*
-                         if !userViewModel.isSubscriptionActive {
-                         
-                         // CTA to sign up
-                         ZStack {
-                         
-                         RoundedRectangle(cornerRadius: 10)
-                         .stroke(.white, lineWidth: 3)
-                         
-                         
-                         VStack (alignment: .leading){
-                         Text("Sign up for our monthly plan to access all the meditations!")
-                         
-                         Button {
-                         // TODO
-                         isPaywallPresented = true
-                         
-                         } label: {
-                         Text("Let's do it")
-                         }
-                         .padding(10)
-                         .background(Color.blue)
-                         .cornerRadius(10)
-                         .foregroundColor(Color.white)
-                         }
-                         .padding(20)
-                         }
-                         .padding([.top, .bottom], 20)
-                         
-                         }
-                         */
                         ForEach(vm.messages) { message in
                             MessageRowView(message: message) { message in
                                 Task { @MainActor in
@@ -132,7 +100,7 @@ struct ContentView: View {
             } else {
                 Button {
                     
-                    if vm.messageCounter < 2 {
+                    if vm.messageCounter < 1 {
                         Task {
                             isTextFieldFocused = false
                             scrollToBottom(proxy: proxy)
@@ -160,11 +128,11 @@ struct ContentView: View {
                         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                             SKStoreReviewController.requestReview(in: scene)
                         }
-                    case 100:
+                    case 200:
                         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                             SKStoreReviewController.requestReview(in: scene)
                         }
-                    case 200:
+                    case 500:
                         if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
                             SKStoreReviewController.requestReview(in: scene)
                         }
@@ -202,11 +170,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
-                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
+                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
             }
         } else {
             ScrollView {
-                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
+                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
             }
         }
     }
