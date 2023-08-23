@@ -100,7 +100,7 @@ struct ContentView: View {
             } else {
                 Button {
                     
-                    if vm.messageCounter < 1 {
+                    if vm.messageCounter < 4 {
                         Task {
                             isTextFieldFocused = false
                             scrollToBottom(proxy: proxy)
