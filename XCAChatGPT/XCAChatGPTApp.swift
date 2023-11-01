@@ -21,7 +21,7 @@ import FirebaseCore
 @main
 struct XCAChatGPTApp: App {
     
-    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
+    @StateObject var vm = ViewModel(api: ChatGPTAPI(apiKey: "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"))
     @StateObject var userViewModel = UserViewModel()
     @State private var showLaunchView: Bool = true
     

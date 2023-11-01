@@ -100,7 +100,7 @@ struct ContentView: View {
             } else {
                 Button {
                     
-                    if vm.messageCounter < 4 {
+                    if vm.messageCounter < 3 {
                         Task {
                             isTextFieldFocused = false
                             scrollToBottom(proxy: proxy)
@@ -170,11 +170,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
-                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
+                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
             }
         } else {
             ScrollView {
-                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
+                ContentView(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")))
             }
         }
     }

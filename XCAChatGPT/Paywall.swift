@@ -88,15 +88,15 @@ struct Paywall: View {
                         .fontWeight(.bold)
                         .minimumScaleFactor(0.5)
                 }
-                
-                HStack {
-                    Image(systemName: "checkmark.seal.fill")
-                        .foregroundColor(.cyan)
-                    Text(trial)
-                        .font(.system(size: 23))
-                        .fontWeight(.bold)
-                        .minimumScaleFactor(0.5)
-                }
+                Spacer()
+//                HStack {
+//                    Image(systemName: "checkmark.seal.fill")
+//                        .foregroundColor(.cyan)
+//                    Text(trial)
+//                        .font(.system(size: 23))
+//                        .fontWeight(.bold)
+//                        .minimumScaleFactor(0.5)
+//                }
             }
             
             Spacer()
